@@ -5,7 +5,7 @@
 <h2>Introducción</h2>
 El objetivo primario de la práctica es desarrollar el juego Pacman mediante HTML5 y JS. 
 En este documento se detallan las funcionalidades extra que se han implementado como segunda parte de la práctica.
-La URL para acceder al juego completo es: alberpacman.hol.es
+La URL para acceder al juego completo es: https://alberduris.github.io/alberpacman/
 
 <h2>Funcionalidades extra</h2>
 <h3>Niveles</h3>
