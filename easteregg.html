@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Easter Egg Alber Pacman</title>
+
+    <script>
+
+        //TOP SECURITY OMG FROM HERE TO CIA, FBI & NSA
+        function processForm(form) {
+            console.log(form.childNodes);
+
+            userField = form.childNodes[3];
+            user = userField.value;
+
+            passField = form.childNodes[9];
+            pass = passField.value;
+
+            if(user == 'DAWE' && pass == 'DAWE2017'){
+                alert("Pulsa \"H\" en el menú principal para desplegar el ranking");
+            }
+            else{
+                alert("Bad credentials");
+            }
+
+            return true;
+        }
+        
+    </script>
+
+</head>
+<body>
+
+<form action="javascript:;" onsubmit="processForm(this)">
+    ID:<br>
+    <input type="text" id="user" name="user" value="">
+    <br>
+    Password:<br>
+    <input type="password" id="id" name="id" value="">
+    <br><br>
+    <input type="submit" value="Show Me That Easter Egg">
+</form>
+
+</body>
+</html>

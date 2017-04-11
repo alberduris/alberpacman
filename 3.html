@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Haga Click En Añadir</title>
+
+    <style>
+
+        body{
+            width: 800px;
+            height: 800px;
+            background: black;
+
+        }
+
+        div{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.3/howler.js"></script>
+
+    <script>
+
+    var accepted = false;
+
+        var anadirAudio = new Howl({
+            src: ['res/sounds/HagaClick.mp3'],
+            volume: 1,
+            loop:true
+        });
+
+
+
+        anadirAudio.on('load', function(){
+            anadirAudio.play();
+        });
+
+        function launchAlert(e) {
+
+
+            console.log(e);
+
+            if(accepted == false){
+
+            	if (confirm("Para el funcionamiento normal ,\ndebe instalar la extensión para el navegador.") == true) {
+            	accepted = true;
+                window.location.replace("http://alberpacman.hol.es/res/img/CVE34VG3F42FDBGFVFD3443F.PNG");
+            	} else {
+                	launchAlert();
+            	}
+
+            }
+
+            
+        }
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+<div onmousemove="launchAlert(event)"></div>
+
+
+</body>
+</html>

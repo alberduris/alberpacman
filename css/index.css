@@ -1,0 +1,272 @@
+html {
+	background: url(../res/img/background1.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body{
+	background-color:#00000000;
+	display: block;
+    margin: 0 auto;
+}
+
+/*Background fancy color top nav*/
+.topnav{
+    position: relative;
+    width: 100%;
+    height: 80px;
+	background: #636669;
+	overflow: hidden;
+}
+
+/*Style the spans inside the nav bar*/
+.topnav a#logo{
+
+	color: #f2f2f2;
+    position: absolute;
+    left: 37%;
+}
+
+.topnav a#openModalBtn{
+    float: right;
+    padding: 1% 1% 0px 0px;
+    text-decoration: none;
+    color: white;
+}
+
+/*change colors links on hover*/
+.topnav span:hover{
+	background-color: #ddd;
+	color: black;
+}
+
+#logo{
+    display: inline-block;
+
+}
+
+#page_wrap{
+    width: 375px;
+	margin: 10px auto;
+
+}
+
+/*SECCION CABECERA*/
+header{
+
+	border: 1px solid #555555;
+    background: black;
+
+	width: 375px;
+	color: white;
+	text-align: center;
+}
+
+header > p{
+	margin-top: 5px;
+}
+/*END SECCION CABECERA*/
+
+
+/*SECCION PUNTUACIÓN*/
+div{
+	color: white;
+}
+
+p{
+	margin: 0px;
+	padding: 0px;
+}
+
+div.modalDialogContent > h2{
+    color: #ff5500;
+    font-size: 32px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+
+}
+
+div.modalDialogContent > h3{
+    font-size: 18px;
+    color: #338b00;
+    margin-bottom: 5px;
+    font-weight: bold;
+
+}
+
+div.modalDialogContent > p{
+    color: #1f1f1f;
+    font-weight: bold;
+}
+
+
+
+div.score{
+	float: left;
+	width: 33.3%;
+	height: 100%;/*Coge la altura del wrapper*/
+	
+	/*Con esto conseguimos que el div score sea como una tabla (su única celda sera el p del score)
+	display: table;*/
+	text-align: center;
+}
+
+div.blank{
+	float: left;
+	width: 33.3%;
+	height: 100%;/*Coge la altura del wrapper*/
+
+	/*Con esto conseguimos que el div score sea como una tabla (su única celda sera el p del score)
+	display: table;*/
+	text-align: center;
+}
+
+/*Aqui tenemos a la celda de la "tabla" score
+div.score > p.score {
+	display: table-cell;
+	vertical-align: middle;/*Perfectamente alineada verticalmente
+}*/
+
+div.highscore{
+	float: left;
+	width: 33.3%;
+	height: 100%;/*Coge la altura del wrapper*/
+
+	text-align: center;
+}
+
+div.blank{
+	float: left;
+	width: 33.4%;
+	height: 100%;/*Coge la altura del wrapper*/
+}
+
+div#scorewrapper {
+    background: black;
+    height: 40px;
+    width: 375px;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+
+}
+
+
+div#game{
+    background: black;
+    width: 375px;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+
+
+}
+
+/*END SECCION PUNTUACIÓN
+
+
+canvas#canvas{
+
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+
+
+
+
+
+}
+canvas#canvas_ui {
+
+    border-bottom: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+
+
+
+}*/
+
+
+
+div#fps{
+	color: white;
+
+}
+
+
+.modalDialog{
+    /*it will move down the page, when open, if you scroll*/
+    position:fixed;
+    font-family: Consolas;
+    /*set our top, right, bottom, and left edges to 0 so that our dark background will span across the entire monitor.*/
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+
+    background: rgba(0,0,0,0.8);
+    /*sitting on top of everything*/
+    z-index: 99999;
+
+    opacity: 0;
+
+    /*nice transition for our modal box to show up on the screen*/
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+
+    /*it allows you to control when you do and don’t want elements to be clickable. We set it for our modalDialog class because we don’t want the link to be clickable until the “:target” pseudo class is fired.*/
+    pointer-events:none;
+
+}
+
+
+.modalDialog:target{
+    /*With our target pseudo class, we set our display to block, so that when the link is clicked our modal box will display.*/
+    border: 1px solid black;
+    opacity: 1;
+    /*We also use our pointer-events property so that when the link is hovered over it’s active. */
+    pointer-events:auto;
+}
+
+.modalDialog > div{
+    width:400px;
+    position:relative;
+    /*margins to bump the modal box down from the top, and centering it on our page. */
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(lightslategrey,lightskyblue);
+    background: -webkit-linear-gradient(lightslategrey,lightskyblue);
+    background: -o-linear-gradient(#fff,#999);
+
+}
+
+.close{
+    background: #606061;
+    color: #FFFFFF;
+    line-height:25px;
+    position:absolute;
+    right:-12px;
+    top:-10px;
+    width:24px;
+    text-decoration:none;
+    text-align:center;
+    font-weight:bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius:12px;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    -moz-box-shadow: 1px 1px 3px #000;
+    box-shadow:1px 1px 3px #000;
+
+}
+
+.close:hover{
+    background:#00d9ff;
+}
+

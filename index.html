@@ -1,0 +1,80 @@
+<!doctype html5>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" type="image/png" sizes="16x16" href="res/favicon-96x96.png">
+	<title>Alber Pacman - DAWE</title>
+	<link rel="stylesheet" href="css/index.css">
+
+	<script src="js/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.3/howler.js"></script>
+	<script src="js/resources.js"></script>
+
+
+</head>
+	
+<body>
+
+	<div class="topnav" id="myTopnav">
+
+        <a href="index.html" id="logo"><img src="res/img/pacman_header.PNG"/></a>
+		<a href="#openModal" id="openModalBtn"><img src="res/img/HowToPlay.png"/></a>
+
+	</div>
+
+    <div id="openModal" class="modalDialog">
+
+        <div class="modalDialogContent">
+            <a href="#close" title="Close" class="close">X</a>
+            <h2>How to play:</h2>
+			<h3>Playing:</h3>
+            <p>W,A,S,D: Move Pacman</p>
+            <p>M: Mute/Unmute</p>
+            <p>+/- : Vol Up/Vol Down</p>
+            <p>Spacebar: Pause/Resume</p>
+			<h3>In Main Menu:</h3>
+            <p>Enter: PLAY!</p>
+            <h3>Anywhere:</h3>
+            <p>Click logo: Reload Game</p>
+			<h3>Unknown:</h3>
+            <p>Easter egg...</p>
+        </div>
+
+    </div>
+
+
+	<div id="page_wrap">
+
+		<div id="scorewrapper">
+			<div class="score">
+				<p>1UP</p>
+				<p class="score">0</p>
+			</div>
+			<div class="highscore">
+				<p>HIGH SCORE</p>
+				<p class="highscore">0</p>
+			</div>
+			<div id="blank" class="blank">
+
+			</div>
+
+		</div>
+
+		<div id="game">
+			<canvas id="canvas" width="375" height="450"></canvas>
+			<canvas id="canvas_ui" width="375" height="25"></canvas>
+		</div>
+
+        <div id="fpscontainer"></div>
+
+
+	</div>
+
+
+</body>
+
+
+<script src="js/pacman.js"></script>
+
+</html>
