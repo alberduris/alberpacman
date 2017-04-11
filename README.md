@@ -1,5 +1,12 @@
 # alberpacman
 
+<h1>Desarrollo del juego “Pacman” mediante HTML5 y JS</h1>
+
+<h2>Introducción</h2>
+El objetivo primario de la práctica es desarrollar el juego Pacman mediante HTML5 y JS. 
+En este documento se detallan las funcionalidades extra que se han implementado como segunda parte de la práctica.
+La URL para acceder al juego completo es: alberpacman.hol.es
+
 <h2>Funcionalidades extra</h2>
 <h3>Niveles</h3>
 Se ha implementado un sistema de niveles. Cuando el jugador ha comido todas las píldoras, incluidas las de poder, pasará automáticamente al siguiente nivel.
